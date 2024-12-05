@@ -1,0 +1,529 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* CSS Variables */
+
+:root {
+    --navbar-height: 59px;
+}
+
+
+/* Navigation Bar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+/* Navigation Bar: Logo and Image */
+
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 69px;
+    margin: 3px 6px;
+    color: blueviolet;
+    cursor: pointer;
+    transition: all 1s ease-out .2s;
+    font-size: 100px;
+    filter: drop-shadow(1px 10px 15px rgba(221, 255, 0, 0.486));
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#logo img:hover {
+    background-color: rgb(98, 0, 255);
+    transform: scale(2);
+    border-radius: 50px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+h3 a {
+    text-decoration: none;
+    color: blueviolet;
+    margin: 12px 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1s ease-out .2s;
+}
+
+h3 a:hover {
+    background-color: red;
+    text-decoration: underline;
+    transform: scale(2);
+    border-radius: 32px;
+}
+
+h4 a {
+    text-decoration: none;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: #285aeb;
+    color: white;
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    margin: 12px 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 1s ease-out .2s;
+    filter: drop-shadow(1px 10px 15px rgba(239, 236, 229, 0.486));
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+h4 a:hover {
+    background-color: red;
+    text-decoration: underline;
+    transform: scale(2);
+    border-radius: 50%;
+}
+
+h5 {
+    font-family: "Gajraj One", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: yellow;
+    text-shadow: 1px 2.5px 1px rgb(43, 0, 255);
+    filter: drop-shadow(1px 10px 15px rgba(0, 41, 91, 0.982));
+    /*ext-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px rgb(238, 255, 0);*/
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+    cursor: pointer;
+}
+
+h5:hover {
+    background-color: red;
+    text-decoration: underline;
+    transform: scale(2);
+    border-radius: 20%
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* Home Section */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('image/muskan\ back.jpg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: red;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 1px 2.5px 1px blue;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 1px 2px 1px yellow;
+}
+
+#home .h-primary {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-size: 70px;
+    text-shadow: 1px 2.5px 1px blue;
+    transition: all 1s ease-out .2s;
+    filter: drop-shadow(1px 10px 15px rgba(227, 255, 251, 0.982));
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#home .h-primary:hover {
+    background-color: #f2f2f2;
+    transform: scale(2);
+}
+
+
+/* Services Section */
+
+#services-container .h-primary {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    text-shadow: 1px 2.5px 1px blue;
+}
+
+#client-section .h-primary {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    text-shadow: 1px 2.5px 1px blue;
+}
+
+#contact .h-primary {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    text-shadow: 1px 2.5px 1px blue;
+}
+
+#services {
+    margin: 15px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 20px 20px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    transition: all 2s ease-out .2s;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box img:hover {
+    opacity: 0.5;
+    background-color: yellow;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Clients Section */
+
+#client-section {
+    position: relative;
+}
+
+#client-section h1.h-primary center {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('image/backmuskan.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 124px;
+    filter: drop-shadow(1px 10px 15px rgba(0, 0, 255, 0.486));
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+    border-radius: 50px;
+    background-color: yellow;
+    cursor: pointer;
+    transition: all 1s ease-out .2s;
+}
+
+#clients img:hover {
+    background-color: rgb(0, 119, 255);
+    transform: scale(2);
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('image/container.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer {
+    background: rgb(225, 14, 14);
+    color: white;
+    padding: 9px 20px;
+}
+
+
+/* social icon */
+
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px 5px 2px;
+}
+
+.fa:hover {
+    transform: translate(0, -10%);
+}
+
+.fa:hover {
+    opacity: 0.7;
+    background-color: #285aeb;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 2px 18px blueviolet;
+    padding: 5px;
+    width: 75px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 2px 30px blueviolet;
+    width: 75px;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 2px 30px blueviolet;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 5px 2px 30px red;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d624 60%, #285aeb 90%);
+    border-radius: 7px;
+    color: white;
+    box-shadow: 5px 2px 30px rgb(101, 226, 43);
+}
+
+.fa-whatsapp {
+    background: green;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 5px 2px 30px yellowgreen;
+}
+
+
+/* Utility Classes */
+
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    font-weight: bold;
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.8rem;
+    border-radius: 18px;
+    cursor: pointer;
+    filter: drop-shadow(1px 10px 15px rgb(0, 0, 255));
+    box-shadow: 2px 2px 5px 2px #fffafa;
+    animation: animate 3s linear infinite;
+    animation-delay: 3s;
+    transition: all 1s ease-out .2s;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgb(0, 119, 255);
+    transform: scale(2);
+}
+
+@keyframes animate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.copy {
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px rgb(238, 255, 0);
+}
